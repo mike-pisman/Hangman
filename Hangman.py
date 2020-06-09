@@ -1,9 +1,8 @@
 import random
 
 def get_word():
-    word_list = open(r"words.txt", "r").readlines()
+    word_list = open(r'words.txt', "r").readlines()
     word = random.choice(word_list).strip()
-
     return word.upper()
 
 
@@ -12,8 +11,9 @@ def play(word):
     guessed = False
     guessed_letters = []
     guessed_words = []
-    tries = 3 + len(word) // 2
+    tries = 6
     print("Let's play Hangman!")
+    print(len(word))
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
